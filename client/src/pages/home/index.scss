@@ -1,0 +1,136 @@
+#home {
+  background-color: #343a40;
+
+  .panel {
+    .container {
+      h2 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .card {
+          max-width: 200px;
+
+          &:hover {
+            i {
+              transform: translate(0, -10px);
+            }
+          }
+
+          i {
+            color: #fff;
+            transition: all 0.5s;
+            margin-bottom: 50px;
+          }
+
+          background-color: #454e5a;
+          height: 200px;
+          width: 16.66667%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            color: #fff;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .tasks {
+    .container {
+      div {
+        padding: 10px 0 20px;
+        background-color: #37404a;
+
+        h2 {
+          padding-top: 20px;
+          margin-left: 20px;
+          margin-bottom: 10px;
+        }
+
+        .table-responsive {
+          padding: 0 20px;
+
+          table {
+            border: #5b6262 1px solid;
+            border-collapse: collapse;
+
+            th {
+              padding: 10px;
+              border: #5b6262 1px solid;
+              text-align: center;
+            }
+
+            td {
+              padding: 10px;
+              border: #5b6262 1px solid;
+              text-align: center;
+
+              .badge {
+                color: #fff;
+                font-size: 10px;
+                font-weight: bold;
+                border-radius: 10px;
+                padding: 5px;
+              }
+
+              .bg-success {
+                background: linear-gradient(to right, #67b26f, #4ca2cd);
+              }
+
+              .bg-primary {
+                background: linear-gradient(to right, #3a7bd5, #3a6073);
+              }
+
+              .bg-danger {
+                background: linear-gradient(to right, #ec6ead, #3494e6);
+              }
+            }
+
+            a {
+              color: #fff;
+            }
+
+            img {
+              height: 1.5rem;
+              width: 1.5rem;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .last-actions {
+    .container {
+      .holder {
+        h3 {
+          padding: 10px 0 20px;
+        }
+
+        padding: 10px 20px;
+        background-color: #37404a;
+      }
+    }
+  }
+  .pie-chart {
+    .container {
+      .holder {
+        padding: 10px 20px;
+        background-color: #37404a;
+      }
+    }
+  }
+}
