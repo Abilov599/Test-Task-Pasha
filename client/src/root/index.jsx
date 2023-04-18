@@ -11,6 +11,8 @@ import avatar from "../assets/images/user/avatar/avatar_ofis.jpg";
 import { Outlet } from "react-router-dom";
 import Footer from "../layouts/footer";
 import logoSmall from "../assets/images/logo/pashalogo_dark.png";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleDarkMode } from "../redux/slice/colorScheme.js";
 const { Sider, Content } = Layout;
 
 const DashboardRoot = () => {
@@ -22,6 +24,14 @@ const DashboardRoot = () => {
   };
   const onClose = () => {
     setOpen(false);
+  };
+  //
+
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+  const dispatch = useDispatch();
+
+  const toggleTheme = () => {
+    dispatch(toggleDarkMode());
   };
 
   const items = [
