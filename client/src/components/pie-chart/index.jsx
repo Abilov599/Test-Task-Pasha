@@ -53,12 +53,27 @@ class ApexCharts extends React.Component {
   render() {
     return (
       <div id="chart">
+        <h2>PORT BAKU RESIDENCE</h2>
         <ReactApexChart
           options={this.state.options}
           series={this.state.series}
           type="donut"
           width={380}
         />
+        <ul>
+          <li>
+            <p>64%</p>
+            <p>Tamamlanmış</p>
+          </li>
+          <li>
+            <p>26%</p>
+            <p>Davam edən</p>
+          </li>
+          <li>
+            <p>10%</p>
+            <p>Gecikdirilən</p>
+          </li>
+        </ul>
       </div>
     );
   }

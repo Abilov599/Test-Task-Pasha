@@ -11,7 +11,7 @@ import avatar from "../assets/images/user/avatar/avatar_ofis.jpg";
 import { Outlet } from "react-router-dom";
 import Footer from "../layouts/footer";
 import logoSmall from "../assets/images/logo/pashalogo_dark.png";
-const { Sider } = Layout;
+const { Sider, Content } = Layout;
 
 const DashboardRoot = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -35,7 +35,9 @@ const DashboardRoot = () => {
   return (
     <Layout>
       <Sider
-        style={{ backgroundColor: "#3A444E" }}
+        style={{
+          backgroundColor: "#3A444E",
+        }}
         trigger={null}
         collapsible
         collapsed={collapsed}
@@ -143,8 +145,10 @@ const DashboardRoot = () => {
             </ul>
           </nav>
         </header>
-        <Outlet />
-        <Footer />
+        <Content>
+          <Outlet />
+          <Footer />
+        </Content>
       </Layout>
     </Layout>
   );

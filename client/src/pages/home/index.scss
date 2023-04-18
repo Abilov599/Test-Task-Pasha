@@ -125,11 +125,11 @@
       }
     }
   }
-  .pie-chart {
+  .pie-charts {
     .container {
-      .holder {
-        padding: 10px 20px;
-        background-color: #37404a;
+      .row {
+        display: flex;
+        gap: 16px;
       }
     }
   }

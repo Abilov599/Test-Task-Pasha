@@ -1,0 +1,17 @@
+#chart {
+  padding: 20px;
+  background-color: #37404a;
+  overflow: hidden;
+  .apexcharts-legend {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    li {
+      text-align: center;
+    }
+  }
+}

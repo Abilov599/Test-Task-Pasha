@@ -308,7 +308,11 @@ const Home = () => {
       </section>
       <section className="pie-charts">
         <div className="container">
-          <ApexCharts />
+          <div className="row">
+            <ApexCharts />
+            <ApexCharts />
+            <ApexCharts />
+          </div>
         </div>
       </section>
     </main>
