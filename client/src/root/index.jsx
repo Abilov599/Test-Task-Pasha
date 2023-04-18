@@ -175,72 +175,72 @@ const DashboardRoot = () => {
             }}
             open={open}
           >
-            <div class="p-3">
-              <h5 class="mt-3">Color Scheme</h5>
-              <hr class="mt-1" />
-              <div class="form-check form-switch mb-1">
+            <div className="p-3">
+              <h5 className="mt-3">Color Scheme</h5>
+              <hr className="mt-1" />
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="light-mode-check">
+                <label className="form-check-label" for="light-mode-check">
                   Light Mode
                 </label>
               </div>
-              <div class="form-check form-switch mb-1">
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="dark-mode-check">
+                <label className="form-check-label" for="dark-mode-check">
                   Dark Mode
                 </label>
               </div>
 
-              <h5 class="mt-4">Width</h5>
-              <hr class="mt-1" />
-              <div class="form-check form-switch mb-1">
+              <h5 className="mt-4">Width</h5>
+              <hr className="mt-1" />
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="fluid-check">
+                <label className="form-check-label" for="fluid-check">
                   Fluid
                 </label>
               </div>
-              <div class="form-check form-switch mb-1">
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="boxed-check">
+                <label className="form-check-label" for="boxed-check">
                   Boxed
                 </label>
               </div>
 
-              <h5 class="mt-4">Left Sidebar</h5>
-              <hr class="mt-1" />
-              <div class="form-check form-switch mb-1">
+              <h5 className="mt-4">Left Sidebar</h5>
+              <hr className="mt-1" />
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="default-check">
+                <label className="form-check-label" for="default-check">
                   Default
                 </label>
               </div>
-              <div class="form-check form-switch mb-1">
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="light-check">
+                <label className="form-check-label" for="light-check">
                   Light
                 </label>
               </div>
-              <div class="form-check form-switch mb-3">
+              <div className="form-check form-switch mb-3">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="dark-check">
+                <label className="form-check-label" for="dark-check">
                   Dark
                 </label>
               </div>
-              <div class="form-check form-switch mb-1">
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="fixed-check">
+                <label className="form-check-label" for="fixed-check">
                   Fixed
                 </label>
               </div>
-              <div class="form-check form-switch mb-1">
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="condensed-check">
+                <label className="form-check-label" for="condensed-check">
                   Condensed
                 </label>
               </div>
-              <div class="form-check form-switch mb-1">
+              <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label class="form-check-label" for="scrollable-check">
+                <label className="form-check-label" for="scrollable-check">
                   Scrollable
                 </label>
               </div>
