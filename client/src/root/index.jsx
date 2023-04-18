@@ -1,5 +1,5 @@
 import { DownOutlined } from "@ant-design/icons";
-import { Layout, Dropdown, Input, Space } from "antd";
+import { Layout, Dropdown, Input, Space, Drawer, Switch } from "antd";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo/pashalogo.png";
@@ -15,6 +15,14 @@ const { Sider, Content } = Layout;
 
 const DashboardRoot = () => {
   const [collapsed, setCollapsed] = useState(false);
+
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
 
   const items = [
     {
@@ -127,7 +135,7 @@ const DashboardRoot = () => {
                 <i className="fa-regular fa-bell fa-2x"></i>
               </li>
               <li>
-                <i className="fa-solid fa-gear fa-2x"></i>
+                <i onClick={showDrawer} className="fa-solid fa-gear fa-2x"></i>
               </li>
               <li className="profile">
                 <a onClick={(e) => e.preventDefault()}>
@@ -144,6 +152,90 @@ const DashboardRoot = () => {
               </li>
             </ul>
           </nav>
+          <Drawer
+            style={{ backgroundColor: "#343A40" }}
+            title="Settings"
+            placement="right"
+            onClose={onClose}
+            keyboard={true}
+            headerStyle={{
+              backgroundColor: "#727cf5",
+              padding: "23px 25px",
+              color: "#fff",
+            }}
+            open={open}
+          >
+            <div class="p-3">
+              <h5 class="mt-3">Color Scheme</h5>
+              <hr class="mt-1" />
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="light-mode-check">
+                  Light Mode
+                </label>
+              </div>
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="dark-mode-check">
+                  Dark Mode
+                </label>
+              </div>
+
+              <h5 class="mt-4">Width</h5>
+              <hr class="mt-1" />
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="fluid-check">
+                  Fluid
+                </label>
+              </div>
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="boxed-check">
+                  Boxed
+                </label>
+              </div>
+
+              <h5 class="mt-4">Left Sidebar</h5>
+              <hr class="mt-1" />
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="default-check">
+                  Default
+                </label>
+              </div>
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="light-check">
+                  Light
+                </label>
+              </div>
+              <div class="form-check form-switch mb-3">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="dark-check">
+                  Dark
+                </label>
+              </div>
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="fixed-check">
+                  Fixed
+                </label>
+              </div>
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="condensed-check">
+                  Condensed
+                </label>
+              </div>
+              <div class="form-check form-switch mb-1">
+                <Switch size="small" defaultChecked />
+                <label class="form-check-label" for="scrollable-check">
+                  Scrollable
+                </label>
+              </div>
+            </div>
+          </Drawer>
         </header>
         <Content>
           <Outlet />

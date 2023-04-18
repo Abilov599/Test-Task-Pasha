@@ -138,3 +138,15 @@ button:focus-visible {
 .ant-steps-item-description {
   color: #90b8c5 !important;
 }
+
+.fa-gear {
+  cursor: pointer;
+}
+
+.form-switch {
+  padding: 2px 0;
+}
+
+.ant-drawer-title {
+  color: white !important;
+}
