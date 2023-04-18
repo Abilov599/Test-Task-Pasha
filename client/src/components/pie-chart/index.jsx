@@ -58,7 +58,7 @@ class ApexCharts extends React.Component {
           options={this.state.options}
           series={this.state.series}
           type="donut"
-          width={380}
+          width={400}
         />
         <ul>
           <li>

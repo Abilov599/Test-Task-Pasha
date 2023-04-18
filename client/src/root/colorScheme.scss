@@ -1,13 +1,13 @@
-.dark {
+.light {
+  background-color: #fafbfe;
   header {
+    box-shadow: 0px 0px 35px rgba(154, 161, 171, 0.15);
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 24px;
-      background-color: #3a444e;
-      -webkit-box-shadow: 0 0 35px 0 rgba(49, 57, 66, 0.5);
-      box-shadow: 0 0 35px 0 rgba(49, 57, 66, 0.5);
+      background-color: #fafbfe;
       min-height: 70px;
       // position: fixed;
       // left: 80px;
@@ -20,7 +20,7 @@
 
         #menu-btn {
           border: none;
-          color: #f1f1f1;
+          color: #313a46;
           height: 70px;
           line-height: 70px;
           width: 60px;
@@ -40,11 +40,11 @@
           input {
             border: none !important;
 
-            &::placeholder {
-              color: #aab8c5 !important;
-            }
+            // &::placeholder {
+            //   color: #aab8c5 !important;
+            // }
 
-            background-color: #464f5b !important;
+            background-color: #dee1e9 !important;
           }
 
           button {
@@ -64,8 +64,11 @@
         align-items: center;
 
         li {
+          i {
+            color: #313a46;
+          }
           a {
-            color: #ced4da;
+            color: #313a46;
 
             img {
               height: 12px;
@@ -75,10 +78,10 @@
 
         .profile {
           padding: 14px 25px;
-          background-color: #464f5b;
+          background-color: #fff;
 
           a {
-            color: #ced4da;
+            color: #313a46;
 
             div {
               display: flex;

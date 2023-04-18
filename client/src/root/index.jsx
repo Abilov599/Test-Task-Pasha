@@ -14,6 +14,7 @@ import logoSmall from "../assets/images/logo/pashalogo_dark.png";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleDarkMode } from "../redux/slice/colorScheme.js";
 const { Sider, Content } = Layout;
+import "./colorScheme.scss";
 
 const DashboardRoot = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -25,6 +26,7 @@ const DashboardRoot = () => {
   const onClose = () => {
     setOpen(false);
   };
+
   //
 
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
@@ -51,7 +53,7 @@ const DashboardRoot = () => {
   ];
 
   return (
-    <Layout>
+    <Layout className={isDarkMode ? "dark" : "light"}>
       <Sider
         style={{
           backgroundColor: "#3A444E",
@@ -179,15 +181,13 @@ const DashboardRoot = () => {
               <h5 className="mt-3">Color Scheme</h5>
               <hr className="mt-1" />
               <div className="form-check form-switch mb-1">
-                <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="light-mode-check">
-                  Light Mode
-                </label>
-              </div>
-              <div className="form-check form-switch mb-1">
-                <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="dark-mode-check">
-                  Dark Mode
+                <Switch
+                  size="small"
+                  onClick={() => toggleTheme()}
+                  defaultChecked={false}
+                />
+                <label className="form-check-label" htmlFor="light-mode-check">
+                  Color Scheme
                 </label>
               </div>
 
@@ -195,13 +195,13 @@ const DashboardRoot = () => {
               <hr className="mt-1" />
               <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="fluid-check">
+                <label className="form-check-label" htmlFor="fluid-check">
                   Fluid
                 </label>
               </div>
               <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="boxed-check">
+                <label className="form-check-label" htmlFor="boxed-check">
                   Boxed
                 </label>
               </div>
@@ -210,37 +210,37 @@ const DashboardRoot = () => {
               <hr className="mt-1" />
               <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="default-check">
+                <label className="form-check-label" htmlFor="default-check">
                   Default
                 </label>
               </div>
               <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="light-check">
+                <label className="form-check-label" htmlFor="light-check">
                   Light
                 </label>
               </div>
               <div className="form-check form-switch mb-3">
                 <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="dark-check">
+                <label className="form-check-label" htmlFor="dark-check">
                   Dark
                 </label>
               </div>
               <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="fixed-check">
+                <label className="form-check-label" htmlFor="fixed-check">
                   Fixed
                 </label>
               </div>
               <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="condensed-check">
+                <label className="form-check-label" htmlFor="condensed-check">
                   Condensed
                 </label>
               </div>
               <div className="form-check form-switch mb-1">
                 <Switch size="small" defaultChecked />
-                <label className="form-check-label" for="scrollable-check">
+                <label className="form-check-label" htmlFor="scrollable-check">
                   Scrollable
                 </label>
               </div>
